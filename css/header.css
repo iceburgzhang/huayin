@@ -1,0 +1,39 @@
+.navbar-default{
+    background-color: #fff;
+    border: none;
+}
+
+.container-fluid {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.logo{
+    height: 95px;
+    width: 368px;
+    width: auto;
+    margin-top:-5px;
+}
+.nav{
+    height: 36px;
+    padding-top: 5px;
+    padding-left: 35px;
+    font-size: 14px;
+    font-weight: 555;
+    line-height: 36px;
+}
+.nav li{
+    float: left;
+    width: 112px;
+    text-align: center;
+}
+.nav a{
+    display: block;
+    height: 36px;
+    width: 96px;
+    color:#BB0003;
+}
+.nav a:hover{
+    background-color: #fff;
+    color:#ac0205;
+}
