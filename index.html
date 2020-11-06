@@ -29,21 +29,19 @@
               <span class="icon-bar"></span>
             </button>
             <router-link to="/" class="navbar-brand logo">
-              <img src="images\logoicon.jpg" height="64">
-            </router-link>
+                <img src="images\logoicon.jpg">
+            </router-link>        
           </div>
   
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li><strong><a href="index.html">网站首页</a></strong></li>
-                <li><strong><a href="page.html?type=about">关于我们</a></strong></li>
-                <li><strong><a href="page.html?type=team">投资团队</a></strong></li>
-                <li><strong><a href="page.html?type=process">认购流程</a></strong></li>
-                <li><strong><a href="page.html?type=manage">财富管理</a></strong></li>
-                <li><strong><a href="page.html?type=adviser">财务顾问</a></strong></li>
-                <li><strong><a href="page.html?type=steward">私募管家</a></strong></li>
-            </ul>
+            <script type="text/html" id="temp_nav">
+                <ul class="nav navbar-nav navbar-right">
+                    {{each info}}
+                    <li><strong><a href={{$value.href}}>{{$value.name}}</a></strong></li>
+                    {{/each}}
+                </ul>
+            </script> 
           </div><!-- /.navbar-collapse -->
 
         </div><!-- /.container-fluid -->
@@ -62,24 +60,16 @@
                 <div class="left card">
                     <div class="title"><strong>旗下产品</strong><span><a href="page.html?type=product&&id=1">更多 &gt;&gt;</a></span></div>
                     <div class="ul">
-                        <div class="tip"><strong style="font-size: 14px;padding:3px;">根据监管要求，私募基金产品业绩不在官网披露，最新净值查询请致电公司客服部0755-89811158</strong></div>
-                        <ul>
-                            <li>领先十六</li>
-                            <li>精选二期</li>
-                            <li>华银价值</li>
-                            <li>弘金华银</li>
-                            <li>领先十六</li> 
-                            <li>华银精选</li>
-                            <li>进取三期</li>
-                            <li>领先八期</li>
-                            <li>领先七期</li>
-                            <li>领先三期</li>
-                            <li>弘金华银</li>
-                            <li>领先六期</li>
-                            <li>华银共同</li>
-                            <li>华银价值</li>
-                            <li>创新六期</li>
-                        </ul>
+                        <div class="tip" id='warning'><strong style="font-size: 14px;padding:3px;">根据监管要求，私募基金产品业绩不在官网披露，最新净值查询请致电公司客服部0755-89811158</strong></div>
+                        <div id="left_info">
+                            <script type="text/html" id="temp_left">
+                                <ul> 
+                                    {{each left}}
+                                    <li>{{$value}}</li>
+                                    {{/each}}
+                                </ul>
+                            </script>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -94,7 +84,7 @@
                                     {{each result v i}}
                                     <li>{{@v.a}}</a></li>
                                     {{/each}}
-                                </script>
+                                </>
                             </ul>
                         </div>
                     </div>
@@ -136,21 +126,18 @@
                   <li><a href="http://www.cmbchina.com/" target="_blank"><img src="./深圳市华银精治资产管理有限公司_files/logo_zsyh.jpg" alt="招商银行" width="145" height="50"></a></li>
                   <li><a href="http://www.ecitic.com/" target="_blank"><img src="./深圳市华银精治资产管理有限公司_files/logo_zxyh.jpg" alt="中信银行" width="145" height="50"></a></li>
                   <li><a href="http://www.szkingdom.com/" target="_blank"><img src="./深圳市华银精治资产管理有限公司_files/logo_gxzq.jpg" alt="国信证券" width="145" height="50"></a></li><li><a href="http://www.szkingdom.com/" target="_blank"><img src="./深圳市华银精治资产管理有限公司_files/logo_jz.jpg" alt="金证股份" width="145" height="50"></a></li><li><a href="http://www.hundsun.com/" target="_blank"><img src="./深圳市华银精治资产管理有限公司_files/logo_hs.jpg" alt="恒生电子" width="145" height="50"></a></li><li><a href="http://www.newone.com.cn/" target="_blank"><img src="./深圳市华银精治资产管理有限公司_files/logo_zszq.jpg" alt="招商证券" width="145" height="50"></a></li><li><a href="http://www.essence.com.cn/" target="_blank"><img src="./深圳市华银精治资产管理有限公司_files/logo_axzq.jpg" alt="安信证券" width="145" height="50" border="0"></a></li><li><a href="http://www.cmbchina.com/" target="_blank"><img src="./深圳市华银精治资产管理有限公司_files/logo_zsyh.jpg" alt="招商银行" width="145" height="50"></a></li><li><a href="http://www.ecitic.com/" target="_blank"><img src="./深圳市华银精治资产管理有限公司_files/logo_zxyh.jpg" alt="中信银行" width="145" height="50"></a></li></ul>
-            </div>
-         </div>
+              </div>
+        </div>
+
 
         <div class="foot">
             <div class="footnav">
-                <div class="footnav">
-                    <a href="index.html">网站首页</a> |
-                    <a href="page.html?type=about">关于我们</a> |
-                    <a href="page.html?type=team">投资团队</a> |
-                    <a href="page.html?type=product">旗下产品</a> |
-                    <a href="page.html?type=report">基金报告</a> |
-                    <a href="page.html?type=process">认购流程</a> |
-                    <a href="page.html?type=manage">财富管理</a> |
-                    <a href="page.html?type=adviser">财务顾问</a> |
-                    <a href="page.html?type=steward">私募管家</a>
+                <div class="footnav" id="foot">
+                    <script type="text/html" id="temp_foot">
+                        {{each info}}
+                        <a href={{$value.href}}>{{$value.name}}</a> |
+                        {{/each}}
+                    </script>
                 </div>
                 <div class="copy">
                     Copyright ©  2008-2018 FineHedgefunds. All Rights Reserved. Email: huayinjingzhi@163.com<br>
@@ -195,6 +182,7 @@
      oUl.innerHTML +=oUl.innerHTML;
      //ul的宽度是所有li宽度之和，复制ul之后的整个ul的宽度就是li的长度乘以一个li的宽度
      oUl.style.width = oLi.length*oLi[0].offsetWidth + "px";
+
      function fnMove()
      {
         //给ul一个速度让整个ul的offsetLeft增加或减少，速度为正则向右移动，速度为负则向左移动
@@ -212,6 +200,33 @@
             oUl.style.left = -oUl.offsetWidth/2 + "px";
         }
     }
+    
+    var data={
+        info:[
+            {href:"index.html",name:'网站首页'},
+            {href:"page.html?type=about",name:'关于我们'},
+            {href:"page.html?type=team",name:'投资团队'},
+            {href:"page.html?type=process",name:'认购流程'},
+            {href:"page.html?type=manage",name:'财富管理'},
+            {href:"page.html?type=adviser",name:'财务顾问'},
+            {href:"page.html?type=steward",name:'私募管家'},
+        ],
+        warning:'',
+        left:["领先十六","精选二期","华银二期","弘金华银","领先十六","华银精选","进取三期","领先八期","领先三期","弘金华银","领先六期","华银共同","创新六期"],
+
+    };
+
+    var result=template("temp_nav",data);
+    var nav=document.getElementById('bs-example-navbar-collapse-1');
+    nav.innerHTML=result;
+
+    var result1=template("temp_left",data);
+    var product=document.getElementById('left_info');
+    product.innerHTML=result1;
+
+    var result2=template("temp_foot",data);
+    var foot=document.getElementById('foot');
+    foot.innerHTML=result2;
     
 </script>
 

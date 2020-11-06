@@ -1,6 +1,41 @@
-.navbar-default{
-    background-color: #fff;
+@media screen and (max-width:992px){
+    .navbar-toggle {
+        margin-top: 34px;
+    }
+    .logo {
+        transform-origin: left;
+        transform: scale(0.75);
+        margin-top:-20px;
+
+      }
+}
+
+@media screen and (max-width:568px){
+    .navbar-toggle {
+        margin-top: 34px;
+        transform: scale(0.75);
+    }
+    .logo {
+        transform-origin: left;
+        transform: scale(0.5);
+        margin-top:-80px;
+
+    }
+}
+
+@media screen and (max-width:1024px){
+    .collapse{
+        height: 20px;
+    }
+}
+
+.navbar{
+    background-color: #f8f8f8;
     border: none;
+}
+
+.navbar-toggle {
+    margin-top:20px;
 }
 
 .container-fluid {
@@ -9,30 +44,34 @@
 }
 
 .logo{
-    height: 95px;
-    width: 368px;
-    width: auto;
-    margin-top:-5px;
+    max-width: 100%;
+    height: auto;
+    width: auto; 
 }
+
+.navbar-collapse.in{
+    overflow-x: visible;
+    overflow-y: visible;
+}
+
+
 .nav{
-    height: 36px;
-    padding-top: 5px;
-    padding-left: 35px;
-    font-size: 14px;
-    font-weight: 555;
-    line-height: 36px;
+    padding:2% ;
+    font-size: 17px;
 }
+
 .nav li{
     float: left;
     width: 112px;
     text-align: center;
 }
+
 .nav a{
-    display: block;
-    height: 36px;
-    width: 96px;
+    flex: block;
+    line-height: 36px;
     color:#BB0003;
 }
+
 .nav a:hover{
     background-color: #fff;
     color:#ac0205;

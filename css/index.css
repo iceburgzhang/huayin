@@ -1,13 +1,3 @@
-@media screen and (max-width:992px){
-    .navbar-toggle {
-        margin-top: 34px;
-    }
-    .logo {
-        transform-origin: left;
-        transform: scale(0.75);
-      }
-}
-
 .left{
     height: 100%;
     float: left;
